@@ -24,61 +24,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialTheme {
-                LazyColumnExample()
+                //LazyColumnExample()
                 //BoxExample()
             }
-        }
-    }
-}
-@Composable
-fun LazyColumnExample() {
-    val frutas = listOf("Manzana", "Banana", "Mango", "Fresa", "Uva")
-
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        items(frutas) { fruta ->
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                elevation = CardDefaults.cardElevation(4.dp)
-            ) {
-                Text(
-                    text = fruta,
-                    modifier = Modifier.padding(16.dp),
-                    style = MaterialTheme.typography.bodyLarge
-                )
-            }
-        }
-    }
-}
-@Composable
-fun BoxExample() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color(0xFFE8F5E9))
-    ) {
-
-        Text(
-            text = "Achachairú 🍈",
-            color = Color.White,
-            fontSize = 28.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier
-                .align(Alignment.Center)
-                .background(Color(0xFF388E3C))
-                .padding(8.dp)
-        )
-
-        Button(
-            onClick = {},
-            modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .padding(16.dp)
-        ) {
-            Text("Ver más")
         }
     }
 }
