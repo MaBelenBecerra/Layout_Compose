@@ -25,8 +25,29 @@ class MainActivity : ComponentActivity() {
         setContent {
             MaterialTheme {
                 //LazyColumnExample()
-                //BoxExample()
+                BoxExample()
             }
         }
     }
 }
+@Composable
+fun BoxExample(){
+        Text(
+            text= "Achachairu",
+            color = Color.White,
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+
+                .background(Color(0xFF388E3C))
+                .padding(8.dp)
+        )
+        Button(
+            onClick = {},
+            modifier = Modifier
+
+                .padding(16.dp)
+        ) {
+            Text("Ver más :)")
+        }
+    }
